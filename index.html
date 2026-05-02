@@ -56,8 +56,7 @@
     .logo {
       width: 120px;
       height: 120px;
-      opacity: 0;
-      animation: fadeIn 0.5s ease 0.1s forwards;
+      animation: fadeIn 0.5s ease forwards;
     }
 
     main {
@@ -66,8 +65,7 @@
       flex-direction: column;
       justify-content: center;
       padding: 3rem 0;
-      opacity: 0;
-      animation: fadeIn 0.5s ease 0.25s forwards;
+      animation: fadeIn 0.5s ease 0.1s forwards;
     }
 
     .tagline {
@@ -121,12 +119,11 @@
       font-size: 13px;
       color: var(--muted);
       letter-spacing: 0.02em;
-      opacity: 0;
-      animation: fadeIn 0.5s ease 0.4s forwards;
+      animation: fadeIn 0.5s ease 0.2s forwards;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
+      from { opacity: 0.01; transform: translateY(6px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
