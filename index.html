@@ -22,7 +22,7 @@
     :root {
       --black: #111;
       --muted: #999;
-      --light: #ddd;
+      --dots: #bbb;
       --bg: #fff;
     }
 
@@ -54,8 +54,8 @@
     }
 
     .logo {
-      width: 80px;
-      height: 80px;
+      width: 120px;
+      height: 120px;
       opacity: 0;
       animation: fadeIn 0.5s ease 0.1s forwards;
     }
@@ -73,31 +73,33 @@
     .tagline {
       font-size: 13px;
       color: var(--muted);
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
       letter-spacing: 0.01em;
     }
 
     nav {
       display: flex;
       flex-direction: column;
-      gap: 0;
+      max-width: 440px;
+    }
+
+    .dots {
+      width: 100%;
+      border: none;
+      border-top: 3px dotted var(--dots);
+      margin: 0;
     }
 
     .nav-link {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.85rem 0;
-      border-top: 1px dotted var(--light);
+      padding: 0.9rem 0;
       font-size: 14px;
+      font-weight: 400;
       color: var(--black);
       text-decoration: none;
       transition: color 0.15s;
-      max-width: 400px;
-    }
-
-    .nav-link:last-child {
-      border-bottom: 1px dotted var(--light);
     }
 
     .nav-link:hover {
@@ -106,6 +108,7 @@
 
     .nav-link .arrow {
       font-size: 12px;
+      font-weight: 400;
       color: var(--muted);
       transition: transform 0.15s;
     }
@@ -129,7 +132,8 @@
 
     @media (max-width: 480px) {
       .page { padding: 1.75rem 1.75rem 1.5rem; }
-      .logo { width: 64px; height: 64px; }
+      .logo { width: 90px; height: 90px; }
+      nav { max-width: 100%; }
     }
   </style>
 </head>
@@ -142,18 +146,22 @@
     <main>
       <p class="tagline">projects in photography, tech, and everything in between.</p>
       <nav>
+        <hr class="dots">
         <a class="nav-link" href="https://portfolio.jessefitzgerald.com">
           <span>portfolio</span>
           <span class="arrow">→</span>
         </a>
+        <hr class="dots">
         <a class="nav-link" href="https://blog.jessefitzgerald.com">
           <span>blog</span>
           <span class="arrow">→</span>
         </a>
+        <hr class="dots">
         <a class="nav-link" href="mailto:hello@jessefitzgerald.com">
           <span>hello@jessefitzgerald.com</span>
           <span class="arrow">→</span>
         </a>
+        <hr class="dots">
       </nav>
     </main>
 
